@@ -7,15 +7,16 @@
 
 <body>
     <script>
-        if (typeof window.ethereum !== "undefined") {
-            ethereum.request({ method: "eth_requestAccounts" })
+        async function connect() {
+            if (typeof window.ethereum !== "undefined") {
+                ethereum.request({ method: "eth_requestAccounts" })
+            }
         }
-        else {
-            alert("There is no wallet installed on your browser!")
-        }
+
+
 
     </script>
-
+    <button id="connectButton" onclick="connect()">Connect</button>
 </body>
 
 </html>
