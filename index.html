@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Javascript Tests for Web3</title>
+</head>
+
+<body>
+    <script>
+        if (typeof window.ethereum !== "undefined") {
+            ethereum.request({ method: "eth_requestAccounts" })
+        }
+        else {
+            alert("There is no wallet installed on your browser!")
+        }
+
+    </script>
+
+</body>
+
+</html>
